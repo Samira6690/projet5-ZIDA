@@ -20,8 +20,8 @@
 </head>
 <body>
 <?php include("nav.php"); ?>
-<section class="container">
-<h1>Bienvenue dans les villes du Burkina:<span class="auto-typing"></span></h1>
+<section class="container3">
+<h1>Bienvenue au Burkina Faso:<span class="auto-typing"></span></h1>
 <marquee behavior="" direction="">
 <h4>Le pays des hommes intègres, <br>
 La destination à ne pas manquer</h4>
@@ -41,7 +41,6 @@ La destination à ne pas manquer</h4>
         </form>
     </div>
 </section><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
 <section class="possibility">
 <h1 class="title">Destinations</h1>
 <div class="wrapper">
@@ -71,9 +70,7 @@ La destination à ne pas manquer</h4>
 </section>
 <!-- <section class="steps">
     <div class="wrapper">
-    
-        <ul>
-            
+        <ul>   
             <li id="steps-1"><br><br><br>
             <h4>Planifiez</h4>
             <p>Confiez-nous vos reves de visiter les sites touristiques du Burkina.</p>
@@ -86,32 +83,11 @@ La destination à ne pas manquer</h4>
                 <h4>Visiter</h4>
                 <p>Nous nous chargeons d'assurer votre sécurité <br> et de veiller à votre pleine sérénité tout <br> au long de la visite.</p>
             </li>
-            <div class="clear"> </div>
-            
+            <div class="clear"></div>   
         </ul>
-
     </div>
 </section><br><br><br><br><br><br><br><br><br><br><br> -->
-
-<section class="contact">
-    <div class="wrapper">
-        <h3>Contactez-nous</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis autem nesciunt, et cumque ut quia perferendis, sit deleniti impedit itaque at minus ipsum doloremque? Corrupti nobis omnis labore cum?</p>
-        <form action="">
-            <label for="name">Nom</label>
-            <input type="text" id="name" placeholder="votre nom">
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="votre email">
-            <input type="submit" value="Ok" class="button1">
-        </form>
-    </div>
-    <footer>
-        <div>
-            <h1>Tour du Faso <span class="orange">.</span></h1>
-            <div>Copyright @ Tous droits réservés. Samira ZIDA, étudiante SEG à Nazi Boni</div>
-        </div>
-    </footer>
-</section>
+<?php include("footer.php"); ?>
 <script src="bootstrap.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>

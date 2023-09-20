@@ -21,7 +21,7 @@ header{
     color: #fff;
     margin: 0 2rem;
 }
-.container{
+.container3{
     background-image: linear-gradient(rgba(0,0,0,0.1),#333), url(c6.webp); 
     height: 70vh;
     right: 0;
@@ -73,7 +73,7 @@ transition: 0.5s;
     margin-bottom: 10px;
     color: #222;
 }
-/* .box .content p{
+ .box .content p{
     padding: 2px;
     font-size: 12px;
     color: #222;
@@ -89,7 +89,7 @@ transition: 0.5s;
     border: 2px solid #29d9d5;
     color: #29d9d5;
     font-weight: bold;
-} */
+} 
 .box:hover{
     box-shadow: 0 0 10px #29d9d5;
 }
@@ -143,29 +143,32 @@ transition: 0.5s;
     background-color: #151f1f;
     width: 5px;
 }
-.container{
+/* .container2{
     padding: 70px 0;
     color: #fff;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 .auto-typing{
     color: #2eb0fe;
 }
-.container h1{
+.container3 h1{
+    color: #fff;
     font-size: 45px;
+    text-align: center;
     line-height: 1.5;
     letter-spacing: 1px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+padding-top: 70px;
 }
-.container2 h4{
+/* .container3 h4{
     font-size: 1.2rem;
     line-height: 2;
     letter-spacing: 1px;
     margin-bottom: 1rem;
-}
-.container a{
+} */
+.container3 a{
     display: inline-block;
     text-decoration: none;
     font-size: 1.25rem;
@@ -183,10 +186,11 @@ marquee{
 }
 .find_trip{
     background-color: #222;
-    padding: 20px;
+    padding: 15px;
     width: 70%;
     position: absolute;
-    bottom: -50px;
+    left: 20px;
+    bottom: -80px;
 }
 .find_trip form{
     display: flex;
@@ -244,8 +248,187 @@ margin: 80px 0;
 }
 .steps p{
     margin-bottom: 20px;
-
 }
+.propos{
+    margin-bottom: 50px;
+    margin-top: 100px;
+    padding: 0 10%;
+    width: 100%;
+}
+.left-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.left-right .left, .left-right .right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.img-doesc{
+    display: flex;
+ align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    background: #222;
+}
+.img-doesc .left{
+    position: relative;
+    margin-left: 10px;
+    height: 250px;
+    width: 47%;
+}
+.img-doesc .right{
+width: 50%;
+}
+.img-doesc .left video{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 0 10px #29d9d5;
+}
+.img-doesc .left::after{
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    content: '';
+    height: 100%;
+    width: 100%;
+     /* background-color: #29d9d5;  */
+    z-index: -1;
+}
+.img-doesc .right h3{
+    color: #999;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.img-doesc .right h1{
+    color: #fff;
+    font-size: 25px;
+   
+}
+.img-doesc .right h2{
+    color: #999;
+    font-size: 25px;
+    
+}
+.img-doesc .right h4{
+    color: #999;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.img-doesc .right p{
+    color: #999;
+    font: 14px;
+    margin-bottom: 30px;
+}
+.img-doesc .right a{
+border: 1px solid #29d9d5;
+color: #29d9d5;
+font-size: 14px;
+padding: 8px 25px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+.service{
+    padding: 0 10%;
+margin-bottom: 50px;
+}
+.col-lg-4{
+    justify-content: space-around;
+}
+.container4{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  
+  }
+  .img1{
+    position: absolute;
+    z-index: 1;
+    right: 50px;
+    margin-left: 70px;
+  top: 60px;
+    /* margin-bottom: 30px;*/
+  }
+  .img2{
+    z-index: 2;
+    right: 35%;
+  position: absolute;
+  }
+  .img3{
+    z-index: 3;
+    top: 160px;
+    position: absolute;
+    right: 30%;
+  }
+  @media(max-width:300px)
+  {
+    .img1{
+      position: absolute !important;
+      z-index: 1 !important;
+      right: 10px !important;
+      margin-left: 20px !important;
+    top: 20px !important;
+    width: 10px !important;
+      /* margin-bottom: 30px;*/
+    }
+    .img2{
+      z-index: 2 !important;
+      right: 25px !important;
+    position: absolute;
+    width: 20px !important;
+    }
+    .img3{
+      z-index: 3 !important;
+      top: 40px !important;
+      position: absolute;
+      right: 20px !important;
+      width: 10px !important;
+    }
+  }
+  .texte{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .special{
+    background-color: #999;
+  }
+  .pop{
+    /* display: flex; */
+  }
+  .ima{
+
+     position: absolute;
+     
+  }
+  .i1{
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+   
+  }
+  .i2{
+    width: 50%;
+    position: absolute;
+    z-index: 2;
+    left: 40px;
+
+  }
+  .i3{
+    width: 50%;
+    position: absolute;
+    z-index: 3;
+    top: 40px;
+    left: 70px;
+
+  }
+  
 #steps-1{
     background: url('steps-icon-1.png') no-repeat top center;
     
