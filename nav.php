@@ -6,20 +6,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="bobo.php">Bobo Dioulasso</a>
+          <a class="nav-link active" aria-current="page" href="service.php">Nos services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="banfora.php">Banfora</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="gorom.php">Gorom-Gorom</a>
+          <a class="nav-link active" aria-current="page" href="contact.php">Contact</a>
         </li>
       </ul>
     </div>
   </div>
-</nav>
+</nav> 
+
 </header>
 
 

@@ -34,28 +34,28 @@
           <h5 class="text-primary">Bobo est la capitale économique du Burkina,allons à sa découverte.</h5>
           <div class="row mt-4">
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="i5.jpg" alt="" class="img-fluid">
+                  <img src="b1.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="i5.jpg" alt="" class="img-fluid">
+                  <img src="b2.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="i5.jpg" alt="" class="img-fluid">
+                  <img src="b4.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="i5.jpg" alt="" class="img-fluid">
+                  <img style="height:200px" src="b7.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="i5.jpg" alt="" class="img-fluid">
+                  <img style="height:200px" style="width:300px" src="b9.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="i5.jpg" class="img-fluid">
+                  <img style="height:200px" src="b6.jpg" class="img-fluid">
               </div>
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="i5.jpg" alt="" class="img-fluid">
+                  <img style="height:200px" src="b3.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="i5.jpg" alt="" class="img-fluid">
+                  <img style="height:200px" src="b8.jpg" alt="" class="img-fluid">
               </div>
           </div>
       </div>
@@ -73,80 +73,8 @@
         <a href="#">Lire plus</a>
     </div>
     </div>
-</section><br><br>
-<section class="service">
-  <h1 class="title">Services</h1>
-  <h5 class="EST text-center">Nous mettons à votre disposition nos services pour que vous passez un bon séjour dans notre ville.</h5>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col-lg-4">
-    <div class="card">
-      <img src="s2.jpg" class="card-img-top" alt="Skyscrapers"/>
-      <div class="card-body">
-        <h5 class="card-title">TRANSPORT</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="card">
-      <img src="r2.jpg" class="card-img-top" alt="Los Angeles Skyscrapers"/>
-      <div class="card-body">
-        <h5 class="card-title">HEBERGEMENT</h5>
-        <!-- <p>additional content. This content is a little bit longer.</p> -->
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-          This content is a little bit longer. to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="card">
-      <img src="s2.jpg" class="card-img-top" alt="Skyscrapers"/>
-      <div class="card-body">
-        <h5 class="card-title">RESTAURATION</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-</div> 
-</section>
-<section class="row special">
-  <div class="texte">
-    <div>
-    <h1>.Nos spécialités</h1>
-    <h5>Des plats traditionnels</h5>
-    <h5>Des plats français</h5>
-    <h5>Des plats chinois</h5>
-    <h5>Patesserie</h5>
-  </div>
-  <div>
-    <h1>.Jours ouvrables</h1>
-    <h5>Du lundi au samedi:6h-22h</h5>
-    <h5>Dimanche de 8h-20h</h5>
-  </div>
-</div>
-  <marquee behavior="" direction="">
-  <div class="image">
-    <img src="aa4.jpg" alt="img1">
-    <img src="foo1.jpeg" alt="img2">
-    <img src="aa5.jpg" alt="img3">
-    <img src="foo1.jpeg" alt="img4">
-    <img src="aa5.jpg" alt="img3">
-    <img src="foo1.jpeg" alt="img4">
-  </div>
-</marquee>
-</section>
-    <section class="destination">
-
-</div>
-</section>
-</section>
+</section><br><br><br><br><br><br>
 <?php include("footer.php"); ?>
+
 </body>
 </html>
