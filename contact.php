@@ -26,14 +26,38 @@
     <div class="wrapper">
         <h3>Contactez-nous</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corporis autem nesciunt, et cumque ut quia perferendis, sit deleniti impedit itaque at minus ipsum doloremque? Corrupti nobis omnis labore cum?</p>
-        <form action="">
-            <label for="name">Nom</label>
-            <input type="text" id="name" placeholder="votre nom">
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="votre email">
-            <input type="submit" value="Ok" class="button1">
-            
-        </form>
+        <form action="traitement.php" method="post">
+
+            <div class="form-group">
+                <input type="text" name="nom" class="form-control" placeholder="Nom" autocomplete="off">
+
+            </div><br>
+            <div class="form-group">
+                <input type="text" name="prenom" class="form-control" placeholder="Prenom"  autocomplete="off">
+
+            </div><br>
+            <div class="form-group">
+                <input type="password" name="email" class="form-control" placeholder="Email"  autocomplete="off">
+
+            </div><br>
+            <div class="form-group">
+                <input type="message" name="message" class="form-control" placeholder="Message" autocomplete="off">
+
+            </div>
+            </form>
+        <!-- <form action="traitement.php" method="post">
+            <label for="nom">nom</label>
+            <input type="text" name="nom" placeholder="votre nom">
+            <label for="prenom">prenom</label>
+            <input type="text" name="prenom" placeholder="votre prenom">
+
+        
+             <label for="email">email</label>
+            <input type="text" name="email" placeholder="votre email">
+            <label for="message">message</label>
+            <textarea name="message" cols="30" rows="10"></textarea>
+            <input type="submit" value="Envoyé" class="button1">
+        </form> -->
     </div>
 </section><br><br><br>
 <?php include("footer.php"); ?>

@@ -1,3 +1,4 @@
+<?php include("config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,22 +23,29 @@
 <?php include("nav.php"); ?>
 <section class="container5">
   <h1>Bienvenue dans la ville Banfora</h1>
-  </section><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </section><br>
 <section class="destination">
     <h1 class="title">Gallery</h1>
     <div class="content">
       <!---box -->
+      <?php 
+      $reponse = $bdd->query('SELECT * FROM sites_touristiques WHERE idville=2');
+      while($donnees = $reponse->fetch()){
+        ?>
       <div class="box">
-        <img src="d7.webp" alt="">
+        <img src="<?php echo $donnees['photo']; ?>" alt="">
         <div class="content">
           <div>
-            <h1>cascades</h1>
-            <p></p>
+            <h1><?php echo $donnees['titre']; ?></h1>
+            <p><?php echo $donnees['content']; ?></p>
             <a href="#">Lire plus</a>
           </div>
         </div>
       </div>
-      <div class="box">
+      <?php 
+    }
+    ?> 
+      <!-- <div class="box">
         <img src="d2.jpg" alt="">
         <div class="content">
           <div>
@@ -86,31 +94,30 @@
             <a href="#">Lire plus</a>
           </div>
         </div>
-      </div>
+      </div> -->
     <!---/box -->
     </div>
     </section><br><br><br>
-    <section class="pop row">
-        <h1 class="title">à propos</h1>
-        <div class="col-lg-6">
-        <div class="ima card border-0">
+    <h1 class="title">à propos</h1>
+    <section class="pop_row">
+      <?php 
+      $reponse = $bdd->query('SELECT * FROM sites_touristiques WHERE id=15');
+      while($donnees = $reponse->fetch()){
+        ?>
+        <div class="ima card border-0 col-lg-6">
             <!-- <img  src="d8.webp" class="i1"> -->
-           <img  src="d7.webp" class="12"> 
+           <img src="<?php echo $donnees['photo']; ?>" class="12"> 
             <!-- <img  src="c3.webp" class="i3"> -->
             </div>
+        <div class="rar col-lg-6">
+          <h3 style="color: blue;"><?php echo $donnees['titre']; ?></h3>
+          <p><?php echo $donnees['content']; ?></p>       
+          <button style="background-color: blue;">revoir gallery</button>       
+          <button style="background-color: rgb(234, 255, 0);">En savoir plus</button>
         </div>
-        <div class="col-lg-6">
-        <div class="rar">
-          <h1>Les cascades de banfora</h1>
-          <p>Situées à environ 12 km au nord-ouest de Banfora, elles tiennent leur nom de la commune de Karfiguéla. Elles constituent l'un des sites touristiques les plus importants au Burkina Faso. La région des Cascades tire son nom de ces chutes d'eau.
-
-            Banfora, ville frontalière de la Côte d’Ivoire dispose d’un climat doux et d’une végétation comparable à celle des pays côtiers permettant de le nommé sans en abuser la Côte d’Azur du Burkina. Mais au sommet d’une colline, se laissent admirer les fameuses cascades qui font la fierté de tout Banfora.
-            
-            Les cascades de Karfiguéla ou cascades de Banfora sont une série de cascades le long du fleuve Comoé au sud-ouest du Burkina Faso. Elles sont situées à environ 12 km au nord-ouest de Banfora et constituent l’un des sites touristiques les plus importants au Burkina Faso. La région des Cascades tire son nom de ces cascades. Dans la chaleur de ce mois de mai, entendre le son de l’eau qui coule au loin est en soi une délivrance. Une dizaine de baignoires naturelles et de bains à remous remplis d’une eau limpide et glacée vous y attendent.
-            La visite des lieux est payante : 1000F CFA pour les étrangers et 500F CFA pour les visiteurs nationaux. La seule stricte interdiction est de passer la nuit sur le site.
-           </p>              
-        </div>
-    </div>
+    <?php 
+  }
+  ?> 
     </section><br><br>
 
 <?php include("footer.php"); ?>

@@ -1,3 +1,4 @@
+<?php include("config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,24 +51,28 @@
   <h1 class="title">Services</h1>
   <h5 class="EST text-center">Nous mettons à votre disposition nos services pour que vous passez un bon séjour dans notre ville.</h5>
   <div class="row row-cols-1 row-cols-md-3 g-4">
+    <?php 
+  $reponse = $bdd->query('SELECT * FROM service');
+  while($donnees = $reponse->fetch()){
+    ?>
   <div class="col-lg-4">
     <div class="card">
-      <img src="s2.jpg" class="card-img-top" alt="Skyscrapers"/>
+      <img src="<?php echo $donnees['image']; ?>" class="card-img-top" alt="Skyscrapers"/>
       <div class="card-body">
-        <h5 class="card-title">TRANSPORT</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to
-          additional content. This content is a little bit longer.
-        </p>
+        <h5 class="card-title"><?php echo $donnees['titre']; ?></h5>
+        <p class="card-text"><?php echo $donnees['contenu']; ?></p>
       </div>
     </div>
   </div>
-  <div class="col-lg-4">
+  <?php 
+}
+?> 
+  <!-- <div class="col-lg-4">
     <div class="card">
       <img src="r2.jpg" class="card-img-top" alt="Los Angeles Skyscrapers"/>
       <div class="card-body">
         <h5 class="card-title">HEBERGEMENT</h5>
-        <!-- <p>additional content. This content is a little bit longer.</p> -->
+        
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in
           This content is a little bit longer. to additional content.</p>
       </div>
@@ -85,36 +90,37 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 </div> 
 </section><br><b><br><br><br>
 <h1 class="title">RESTAURATION</h1>
 <section class="row special">
-
-  <div class="texte">
-    <div>
-    <h1>.Nos spécialités</h1>
-    <h5>Des plats traditionnels</h5>
-    <h5>Des plats français</h5>
-    <h5>Des plats chinois</h5>
-    <h5>Patesserie</h5>
+  <div class="container text-center mt-5">
+    <h5 class="text-primary">Dites-nous comment vous aimez voyager et nous trouverons la vôtre. De super offres sur tous les lieux de villégiature populaires.
+    </h5>
+    <div class="row mt-4">
+      <?php 
+      $reponse = $bdd->query('SELECT * FROM service WHERE id=4');
+      while($donnees = $reponse->fetch()){
+        ?>
+        <div class="col-6 col-lg-3 mb-4">
+            <img src="<?php echo $donnees['image']; ?>" alt="" class="img-fluid">
+        </div>
+        <!-- <div class="col-6 col-lg-3 mb-4">
+            <img src="aa5.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-6 col-lg-3 mb-4">
+            <img style="height:200px" src="foo1.jpeg" alt="" class="img-fluid">
+        </div>
+        <div class="col-6 col-lg-3 mb-4">
+            <img style="height:200px" src="aa5.jpg" alt="" class="img-fluid">
+        </div> -->
+        <?php 
+      }
+      ?> 
+    </div>
   </div>
-  <div>
-    <h1>.Jours ouvrables</h1>
-    <h5>Du lundi au samedi:6h-22h</h5>
-    <h5>Dimanche de 8h-20h</h5>
-  </div>
-</div>
-  <marquee behavior="" direction="left">
-  <div class="image">
-    <img src="aa4.jpg" alt="img1">
-    <img src="foo1.jpeg" alt="img2">
-    <img src="aa5.jpg" alt="img3">
-    <img src="foo1.jpeg" alt="img4">
-    <img src="aa5.jpg" alt="img3">
-    <img src="foo1.jpeg" alt="img4">
-  </div>
-</marquee>
+  
 </section> 
 <h1 class="title">HEBERGEMENT</h1>
 <div class="container text-center mt-5">
@@ -122,10 +128,14 @@
   <h5 class="text-primary">Dites-nous comment vous aimez voyager et nous trouverons la vôtre. De super offres sur tous les lieux de villégiature populaires.
   </h5>
   <div class="row mt-4">
+    <?php 
+    $reponse = $bdd->query('SELECT * FROM service WHERE id=8');
+    while($donnees = $reponse->fetch()){
+      ?>
       <div class="col-6 col-lg-3 mb-4">
-          <img src="h1.jpg" alt="" class="img-fluid">
+          <img src="<?php echo $donnees['image']; ?>" alt="" class="img-fluid">
       </div>
-      <div class="col-6 col-lg-3 mb-4">
+      <!-- <div class="col-6 col-lg-3 mb-4">
           <img src="h3.jpg" alt="" class="img-fluid">
       </div>
       <div class="col-6 col-lg-3 mb-4">
@@ -133,7 +143,10 @@
       </div>
       <div class="col-6 col-lg-3 mb-4">
           <img style="height:200px" src="h6.jpg" alt="" class="img-fluid">
-      </div>
+      </div> -->
+      <?php 
+    }
+    ?> 
   </div>
 </div>
 </section>

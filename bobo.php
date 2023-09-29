@@ -1,3 +1,4 @@
+<?php include("config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,10 +34,14 @@
           <h3>Quelque sites de bobo à visiter</h3>
           <h5 class="text-primary">Bobo est la capitale économique du Burkina,allons à sa découverte.</h5>
           <div class="row mt-4">
+            <?php 
+            $reponse = $bdd->query('SELECT * FROM sites_touristiques WHERE idville=1');
+            while($donnees = $reponse->fetch()){
+              ?>
               <div class="col-6 col-lg-3 mb-4">
-                  <img src="b1.jpg" alt="" class="img-fluid">
+                  <img src="<?php echo $donnees['photo']; ?>" alt="" class="img-fluid">
               </div>
-              <div class="col-6 col-lg-3 mb-4">
+              <!-- <div class="col-6 col-lg-3 mb-4">
                   <img src="b2.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-6 col-lg-3 mb-4">
@@ -56,22 +61,32 @@
               </div>
               <div class="col-6 col-lg-3 mb-4">
                   <img style="height:200px" src="b8.jpg" alt="" class="img-fluid">
-              </div>
+              </div> -->
+              <?php 
+}
+?> 
           </div>
       </div>
   </section>
   <section class="propos">
     <h1 class="title">à propos</h1>
     <div class="img-doesc">
+        <?php 
+        $reponse = $bdd->query('SELECT * FROM sites_touristiques WHERE id=16');
+        while($donnees = $reponse->fetch()){
+          ?>
         <div class="left">
-        <video src="video.mp4"autoplay autopause loop></video>
+        <video src="<?php echo $donnees['video']; ?>"></video>
         </div>
     <div class="right">
     
-      <h1>La ville sya</h1>
-      <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Aut placeat, ipsum <br> eveniet, illo consequuntur alias ipsam ex quae, <br> corrupti enim incidunt mollitia officiis <br> tenetur laudantium dicta nulla unde sit? Rerum.</h>
+      <h1><?php echo $donnees['titre']; ?></h1>
+      <p><?php echo $donnees['content']; ?></h>
         <a href="#">Lire plus</a>
     </div>
+    <?php 
+}
+?> 
     </div>
 </section><br><br><br><br><br><br>
 <?php include("footer.php"); ?>
