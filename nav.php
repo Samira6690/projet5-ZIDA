@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style="color: red;">
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">Accueil</a>
@@ -48,9 +47,7 @@
           }
            else {
             ?>
-
         <a href="index.php"><button class="btn btn-outline-success" style="background-color: blue;" type="submit">Se connecté</button></a>
-          
          <a href="inscription.php"><button class="btn btn-outline-success" style="background-color: rgb(85, 255, 0);" type="submit">Inscription</button></a>
          <?php
         }

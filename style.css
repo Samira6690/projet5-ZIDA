@@ -221,6 +221,96 @@ padding-bottom: 20%;
     background-color: #151f1f;
     width: 5px;
 }
+.contact1{
+    background-color: #f9f9fb;
+    padding: 100px 0;
+}
+.contact1 .container{
+    max-width: 1100px;
+    margin: 0px auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 50px 130px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 50px -10px #d6d6d6;
+}
+.contact1 .container .title1{
+    color: #2a2a2a;
+    margin-bottom: 70px;
+    text-align: center;
+}
+.contact1 .container .title1 h3{
+    font-size: 1.2rem;
+}
+.contact1 .container .title1 h4{
+    font-size: 3rem;
+}
+
+.contact1 .container form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+}
+.contact1 .container form input{
+    width: 47%;
+    margin-bottom: 20px;
+    margin: 20px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ededec;
+    transition: 0.2s;
+}
+.contact1 .container form input :hover,
+.contact1 .container form textarea :hover
+{
+    border-bottom: 2px solid #1fb31f;
+}
+
+.contact1 .container form textarea{
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin-bottom: 60px;
+}
+.contact1 .container form button{
+width: 192px;
+height: 50px;
+border-radius: 8px;
+border: none;
+background-color: #1fb3bf;
+color: white;
+font-size: 1.2rem;
+cursor: pointer;
+outline: none;
+margin: 0 auto;
+}
+.contact1 .container form button:hover{
+    transition: translateY(-5px);
+    box-shadow: rgb(214 214 214) 0px 10px 50px -10px;
+}
+@media screen and (max-width: 300px){
+    .contact1 .container form{
+        flex-direction: column;
+        width: 95%;
+    }
+    .contact1 .container form input{
+        width: 100%;
+
+    }
+.contact1 .container .title h3{
+    font-size: 1rem;
+}
+.contact1 .container .title h4{
+    font-size: 2rem;
+
+}
+}
+
 /* .container2{
     padding: 70px 0;
     color: #fff;
@@ -249,6 +339,10 @@ padding-top: 70px;
     letter-spacing: 1px;
     margin-bottom: 1rem;
 } 
+.magi{
+width: 20px;
+border-radius: 50%;    
+}
 .container3 a{
     display: inline-block;
     text-decoration: none;

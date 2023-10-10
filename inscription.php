@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="bootstrap.bundle.js">
     <link rel="stylesheet" href="bootstrap.min.css">
@@ -20,9 +21,8 @@
     <title>Inscription</title>
 </head>
 <body>
-<?php include("config.php"); ?>
+<?php include("config1.php"); ?>
 <?php include("nav.php"); ?>
-
     <div class="login-form">
     <?php
         if(isset($_GET['reg_err']))
@@ -74,7 +74,7 @@
             }
         }
                     ?>
-        <form action="inscription_traitement.php" method="post">
+        <!-- <form action="inscription_traitement.php" method="post">
             <h2 class="text-center">Inscription</h2>
             <div class="form-group">
                 <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" autocomplete="off">
@@ -93,14 +93,28 @@
 
             </div>
             <div class="form-group">
-            <p class="text-center"><a href="index.php">Se connecté</a></p>
-                <button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+                <button type="submit" class="btn btn-primary btn-block" name="submit">S'inscrire</button>
                </div>
         </form>
-
     </div>
     <style>
         
-    </style>
+    </style> -->
+    <section class="contact1">
+        <div class="container">
+            <div class="title1">
+            <h4>Inscription</h4>
+        </div>
+        <form action="inscription_traitement.php" method="post">
+            <input type="text" name="pseudo" placeholder="Pseudo" required="">
+            <input type="text" name="email" placeholder="Email" required="">
+            <input type="password" name="password" placeholder="Mot de passe" required="">
+            <input type="password" name="password_retype"  placeholder="Re-tapez le mot de passe" required="">
+            <button type="submit">S'inscrire</button>
+        </form>
+        </div>
+    </section>
+    <?php include("footer.php"); ?>
+
 </body>
 </html>

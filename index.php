@@ -1,5 +1,4 @@
 <?php include("config1.php"); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +11,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="bootstrap.bundle.js">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap.min.js">
+    
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.1/css/all.min.css">
@@ -43,7 +44,7 @@
             }
         }
                     ?>
-        <form action="connexion.php" method="post">
+        <!-- <form action="connexion.php" method="post">
             <h2 class="text-center">Connexion</h2>
             <div class="form-group">
                 <input type="text" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
@@ -56,11 +57,21 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Connexion</button>
                </div>
+        </form> -->
+        <section class="contact1">
+        <div class="container">
+            <div class="title1">
+            <h4>Connexion</h4>
+        </div>
+        <form action="connexion.php" method="post">
+            <input type="text" name="email" placeholder="Email" required="">
+            <input type="password" name="password" placeholder="Mot de passe" required="">
+            <button type="submit" name="submit">Connexion</button>
         </form>
-<p class="text-center"><a href="inscription.php">Se connecté</a></p>
+        </div>
+    </section>
     </div>
-    <style>
-        
-    </style>
+    <?php include("footer.php"); ?>
+
 </body>
 </html>

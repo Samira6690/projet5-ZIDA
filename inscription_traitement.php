@@ -1,13 +1,10 @@
 <?php include("config1.php"); 
-
-
 if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password_retype']))
 {
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
         $password_retype = htmlspecialchars($_POST['password_retype']);
-
         $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateur WHERE email = ?');
         $check ->execute(array($email));
         $data = $check->fetch();
@@ -25,14 +22,15 @@ if($row == 0)
                     {
                         $password = hash('sha256', $password);
                             $ip = $_SERVER['REMOTE_ADDR'];
-                        $insert = $bdd->prepare('INSERT INTO utilisateur (pseudo, email, password, ip) VALUES(:pseudo, :email, :password, :ip)');
+                        $insert = $bdd->prepare('INSERT INTO utilisateur (pseudo, email, password, ip, role) VALUES(:pseudo, :email, :password, :ip, :role)');
                         $insert->execute(array(
                         'pseudo' => $pseudo,
-                        'email' =>$email,
+                        'email' => $email,
                         'password' => $password,
-                        'ip' =>$ip
+                        'ip' => $ip,
+                        'role' => 'utilisateur'
                         ));
-                        header('Location:connexion.php');
+                       header('Location:index.php');
                     }else header('Location: inscription.php?reg_err=password');
                 }else header('Location: inscription.php?reg_err=email');
         }else header('Location: inscription.php?reg_err=email_length');
